@@ -103,7 +103,8 @@ if file is not None:
     # Evaluasi
     y_pred = model.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
-    print("Akurasi model:", acc)
+    st.write("Akurasi model:", acc) 
+    st.write(f"Akurasi model: {acc*100:.2f}%")
 
 
     # Prediksi seluruh data
@@ -143,3 +144,4 @@ if st.button("Prediksi BMI"):
         st.info(f"Kategori (Machine Learning): **{kategori[0]}**")
     else:
         st.warning("Model belum dilatih karena belum ada data.")
+
